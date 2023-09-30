@@ -12,9 +12,8 @@ password = os.getenv('password')
 DATABASE_NAME = "BunnyJeans"
 # COLLECTION_NAME = "Data"
 MONGO_DB_URL = f"mongodb+srv://{username}:{password}@cluster0.vpnjjt4.mongodb.net/"
-MONGO_DB_PORT = 8080
 
-client = MongoClient(f"{MONGO_DB_URL}:{MONGO_DB_PORT}")
+client = MongoClient(MONGO_DB_URL)
 
 db = client[DATABASE_NAME]
 
